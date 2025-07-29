@@ -77,9 +77,9 @@ Serão avaliados os seguintes pontos:
 |![i1](i1.png)|
 |![i2](i2.png)|
 |![i3](i3.png)|
-|![i3](i4.png)|
-|![i3](i5.png)|
-|![i3](i6.png)|
-|![i3](i7.png)|
+|![i4](i4.png)|
+|![i5](i5.png)|
+|![i6](i6.png)|
+|![i7](i7.png)|
 
 
