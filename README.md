@@ -70,8 +70,16 @@ Serão avaliados os seguintes pontos:
 - **Estilo e UI e UX:** A interface do usuário deve ser limpa, intuitiva e responsiva.
 - **Funcionalidade:** O aplicativo deve atender a todos os requisitos funcionais descritos.
 
-## Como Entregar
+# Fotos
 
-1. Crie um fork deste repositório.
-2. Implemente a solução.
-3. Faça commits frequentes e claros.
+|print1|
+|:-:|
+|![i1](i1.png)|
+|![i2](i2.png)|
+|![i3](i3.png)|
+|![i3](i4.png)|
+|![i3](i5.png)|
+|![i3](i6.png)|
+|![i3](i7.png)|
+
+
