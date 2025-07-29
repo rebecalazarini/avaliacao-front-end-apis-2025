@@ -1,4 +1,4 @@
-[
+const userPosts = [
   {
     "userId": 1,
     "id": 1,
@@ -251,4 +251,51 @@
     "title": "commodi ullam sint et excepturi error explicabo praesentium voluptas",
     "body": "odio fugit voluptatum ducimus earum autem est incidunt voluptatem\nodit reiciendis aliquam sunt sequi nulla dolorem\nnon facere repellendus voluptates quia\nratione harum vitae ut"
   }
-]
+];
+
+function posts() {
+  const postsContainer = document.getElementById('postsContainer');
+  postsContainer.innerHTML = ''; // Limpar container antes de adicionar posts
+
+  // Loop pelos posts
+  userPosts.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.classList.add('post'); // Adiciona a classe 'post' ao elemento
+
+    // Criar HTML do post
+    postElement.innerHTML = `
+      <h2>${post.title}</h2>
+      <p><strong>ID do post:</strong> ${post.id}</p>
+      <p><strong>ID do usuário:</strong> ${post.userId}</p>
+      <p><strong>Conteúdo:</strong></p>
+      <p>${post.body}</p>
+      <button onclick="mostrarDetalhes(${post.id})">Ver Detalhes</button>
+    `;
+
+   
+    postsContainer.appendChild(postElement);
+  });
+}
+
+
+function mostrarDetalhes(postId) {
+  const produto = userPosts.find(post => post.id === postId);
+  const conteudo = document.getElementById('conteudo');
+  
+
+  conteudo.innerHTML = `
+      <h3>${produto.title}</h3>
+      <p>${produto.body}</p>
+  `;
+
+ 
+  document.getElementById('detalhes').classList.remove('oculto');
+}
+
+
+function fecharModal() {
+  document.getElementById('detalhes').classList.add('oculto');
+}
+
+
+window.onload = posts;

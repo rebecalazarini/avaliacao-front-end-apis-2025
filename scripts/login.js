@@ -33,3 +33,6 @@ async function login() {
     alert('Erro ao fazer login');
   }
 }
+
+// user:emilys
+//senha:emilyspass

@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/main2.css">
     <title>Login Posts</title>
 </head>
 
 <body>
     <header></header>
     <main>
-        
+        <div id="postsContainer">
+        </div>
+
+          <div id="detalhes" class="modal oculto">
+            <div class="janela">
+                <div class="header-modal">
+                    <h3>Detalhes do Post</h3>
+                    <button onclick="fecharModal()">X</button>
+                </div>
+                <div id="conteudo"></div>
+            </div>
+        </div>
     </main>
     <footer></footer>
 </body>

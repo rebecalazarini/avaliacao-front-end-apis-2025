@@ -1,0 +1,104 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --p1: #000000;
+    --p2: #333333;
+    --p3: #cccccc;
+    --p4: #ffffff;
+}
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--p1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    align-items: center;
+     padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+#postsContainer {
+  width: 80%;
+  max-width: 800px;
+}
+
+.post {
+  background-color: var(--p3);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.post h2 {
+  color: var(--p1);
+}
+
+.post p {
+  color: #333;
+}
+
+.post strong {
+  color: var(--p2);
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+
+.modal:not(.oculto) {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.janela {
+  background: var(--p3);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+}
+
+
+.header-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-modal button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.oculto {
+  visibility: hidden;
+  opacity: 0;
+}
