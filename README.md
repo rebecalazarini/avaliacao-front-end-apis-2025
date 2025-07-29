@@ -80,5 +80,7 @@ Serão avaliados os seguintes pontos:
 |![i5](i5.png)|
 |![i6](i6.png)|
 |![i7](i7.png)|
+|![i7](i8.png)|
+
 
 

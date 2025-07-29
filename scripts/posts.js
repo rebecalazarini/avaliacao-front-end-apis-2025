@@ -277,6 +277,11 @@ function posts() {
   });
 }
 
+function filtroBusca() {
+    const busca = document.getElementById('searchInput').value.toLowerCase(); // Pega o valor da busca e converte para minúsculas
+    const postsFiltrados = userPosts.filter(post => post.title.toLowerCase().includes(busca)); // Filtra os posts com base no título
+    posts(postsFiltrados);
+}
 
 function mostrarDetalhes(postId) {
   const produto = userPosts.find(post => post.id === postId);
