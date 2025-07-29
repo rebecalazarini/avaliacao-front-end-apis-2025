@@ -74,7 +74,6 @@ Serão avaliados os seguintes pontos:
 
 |print1|
 |:-:|
-|![i1](i1.png)|
 |![i2](i2.png)|
 |![i3](i3.png)|
 |![i4](i4.png)|
