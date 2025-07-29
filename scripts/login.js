@@ -1,14 +1,35 @@
-function login() {
-    const name = document.getElementById("name").value;
-    const password = document.getElementById("password").value;
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  login(); 
+});
 
-    const nameCorreto = "rebecalazarini";
-    const passwordCorreto = "rebeca123";
+async function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
 
-    if (name === nameCorreto && password === passwordCorreto) {
-        window.location.href = "posts.html";
+  try {
+        const response = await fetch('https://dummyjson.com/auth/login', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    
+    username: username,
+    password: password,
+    expiresInMins: 30, // optional, defaults to 60
+  }),
+})
+
+    const data = await response.json();
+
+    if (response.ok) {
+      localStorage.setItem('token', data.token);
+      window.location.href = 'posts.html';
     } else {
-        alert("Nome e/ou senha incorretos");
+      alert('Email ou senha incorretos');
     }
 
+  } catch (error) {
+    console.error('Erro ao fazer login:', error);
+    alert('Erro ao fazer login');
+  }
 }
