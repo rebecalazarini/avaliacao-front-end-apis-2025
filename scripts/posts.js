@@ -255,14 +255,14 @@ const userPosts = [
 
 function posts() {
   const postsContainer = document.getElementById('postsContainer');
-  postsContainer.innerHTML = ''; // Limpar container antes de adicionar posts
+  postsContainer.innerHTML = '';
 
-  // Loop pelos posts
+
   userPosts.forEach(post => {
     const postElement = document.createElement('div');
-    postElement.classList.add('post'); // Adiciona a classe 'post' ao elemento
+    postElement.classList.add('post'); 
 
-    // Criar HTML do post
+  
     postElement.innerHTML = `
       <h2>${post.title}</h2>
       <p><strong>ID do post:</strong> ${post.id}</p>
@@ -278,8 +278,8 @@ function posts() {
 }
 
 function filtroBusca() {
-    const busca = document.getElementById('searchInput').value.toLowerCase(); // Pega o valor da busca e converte para minúsculas
-    const postsFiltrados = userPosts.filter(post => post.title.toLowerCase().includes(busca)); // Filtra os posts com base no título
+    const busca = document.getElementById('searchInput').value.toLowerCase();
+    const postsFiltrados = userPosts.filter(post => post.title.toLowerCase().includes(busca));
     posts(postsFiltrados);
 }
 
